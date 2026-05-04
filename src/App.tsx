@@ -51,7 +51,7 @@ export default function App() {
     }
   };
 
-  const implementedFields = ['year_len', 'n_months', 'months', 'month_len', 'week_len', 'weekdays', 'n_moons', 'year', 'first_day', 'moons', 'lunar_cyc', 'lunar_shf', 'events', 'notes'];
+  const implementedFields = ['year_len', 'n_months', 'months', 'month_len', 'week_len', 'weekdays', 'n_moons', 'year', 'first_day', 'moons', 'lunar_cyc', 'lunar_shf', 'events', 'notes', 'era_bce', 'era_ce'];
   const unimplementedFields = useMemo(() => Object.keys(config).filter(key => !implementedFields.includes(key)), [config]);
 
   return (
@@ -105,7 +105,7 @@ export default function App() {
           )}
         </div>
         <div className="lg:col-span-2">
-          <h2 className="text-xl font-semibold mb-4">Calendar View ({config.year})</h2>
+          <h2 className="text-xl font-semibold mb-4">Calendar View ({config.year >= 0 ? config.year : Math.abs(config.year)} {config.year >= 0 ? config.era_ce : config.era_bce})</h2>
           <CalendarView key={JSON.stringify(config)} config={config} setConfig={setConfig} />
         </div>
       </main>

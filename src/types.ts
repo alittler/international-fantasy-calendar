@@ -13,6 +13,8 @@ export interface CalendarConfig {
   year: number;
   first_day: number;
   notes: Record<string, string>; // Date key -> note
+  era_bce: string;
+  era_ce: string;
 }
 
 export const defaultConfig: CalendarConfig = {
@@ -32,5 +34,7 @@ export const defaultConfig: CalendarConfig = {
   lunar_shf: { "Luna": 20 },
   year: 2017,
   first_day: 0,
-  notes: { "1-1": "A new beginning" }
+  notes: { "1-1": "A new beginning" },
+  era_bce: "BCE",
+  era_ce: "CE"
 };

@@ -18,11 +18,13 @@ export const presets: Record<string, Preset> = {
       moons: ["Luna"],
       lunar_cyc: { "Luna": 29.53 },
       lunar_shf: { "Luna": 0 },
-      first_day: 4 
+      first_day: 4,
+      era_bce: "BCE",
+      era_ce: "CE"
     },
     description: "The Gregorian calendar is the internationally accepted civil calendar, based on Earth's orbit around the Sun."
   },
-  HarmonicAccord: {
+  InternationalFixedCalendar: {
     config: {
       year_len: 365,
       n_months: 14,
@@ -34,8 +36,10 @@ export const presets: Record<string, Preset> = {
       moons: ["Luna"],
       lunar_cyc: { "Luna": 29.53 },
       lunar_shf: { "Luna": 0 },
-      first_day: 0
+      first_day: 0,
+      era_bce: "BCE",
+      era_ce: "CE"
     },
-    description: "The Harmonic Accord, or International Fantasy Standard, divides the year into 13 months of exactly 28 days each, followed by a single 'YearDay' of reflection, ensuring temporal harmony where every month starts on the same weekday."
+    description: "The International Fixed Calendar (IFS), or International Fantasy Standard, divides the year into 13 months of exactly 28 days each, followed by a single 'YearDay' of reflection, ensuring temporal harmony where every month starts on the same weekday."
   }
 };
